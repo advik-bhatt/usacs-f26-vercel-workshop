@@ -1,0 +1,46 @@
+{
+  "name": "usacs-vercel-workshop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/react": "4.0.126",
+    "@flags-sdk/vercel": "1.5.0",
+    "@neondatabase/serverless": "1.1.0",
+    "@upstash/redis": "1.39.0",
+    "@vercel/analytics": "2.0.1",
+    "@vercel/blob": "2.8.0",
+    "@vercel/firewall": "1.2.5",
+    "@vercel/functions": "3.9.9",
+    "@vercel/global-config": "1.5.1",
+    "@vercel/queue": "0.7.0",
+    "@vercel/sandbox": "3.5.1",
+    "@vercel/speed-insights": "2.0.0",
+    "@vercel/toolbar": "0.2.7",
+    "ai": "7.0.123",
+    "botid": "1.5.11",
+    "flags": "4.3.1",
+    "next": "16.3.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "workflow": "4.8.9",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.7",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vercel": "62.4.0"
+  }
+}

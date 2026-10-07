@@ -1,0 +1,36 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/workshop",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/:slug",
+      "destination": "https://vercel.com/docs/:slug",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/demos/routing(.*)",
+      "headers": [
+        {
+          "key": "x-workshop-demo",
+          "value": "set by vercel.json"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "src/app/api/queues/consumer/route.ts": {
+      "experimentalTriggers": [
+        {
+          "type": "queue/v2beta",
+          "topic": "orders"
+        }
+      ]
+    }
+  }
+}
